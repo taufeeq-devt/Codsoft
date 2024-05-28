@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Taufeeq Khan</h1>
+        <p>Code with a Purpose</p>
+    </header>
+ 
+
+    <section id="about">
+        <h2>About Me</h2> 
+        <img src="your-image.jpg" alt="Your Image">
+       
+        <p>I am Taufeeq Khan, a dedicated and passionate software engineer with a strong foundation in web development, Java programming, and content creation. With a keen eye for detail and a commitment to excellence, I strive to deliver high-quality software solutions that meet and exceed client expectations.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skill">
+            <p>Web Development</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-skill="70%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Java Development</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-skill="60%"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Content Creation</p>
+            <div class="skill-bar">
+                <div class="skill-level" data-skill="80%"></div>
+            </div>
+        </div>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <div class="project-frame">
+                <img src="img1.jpg" alt="Project 1">
+                <div class="frame-overlay"></div>
+            </div>
+            <div class="project-content">
+                <h3>CLIMA : Climate Change Awareness and Tracking</h3>
+                <p>Clima is an innovative web project designed to raise awareness about climate change and track the recorded data of climatic gases. The main feature of Clima is its interactive timeline that illustrates the changes in climate over the years. Users can explore how various climatic gases have evolved and impacted our environment. The website includes an "About" tab, providing detailed information on climate change and its global effects. The primary goal of Clima is to educate and inform users about the critical issues related to climate change.
+
+                    Developed using JavaScript, HTML, CSS, and Bootstrap, Clima offers a sleek and user-friendly interface. While the frontend of the project is fully developed, showcasing a visually appealing design and intuitive navigation, the backend is still under development to ensure robust data handling and integration. Additionally, Clima utilizes the Google API to enhance its functionality and provide accurate, real-time data.
+                    
+                    As the project progresses, Clima aims to become a comprehensive platform for climate change awareness, empowering individuals with the knowledge and tools to make informed decisions for a sustainable future. One unique feature of Clima is the integration of a chatbot named Clima7.0, which is designed to share information and answer questions about climate change. This chatbot offers an interactive experience, allowing users to engage in real-time conversations about environmental issues and gain insights into the effects of climate change.
+                    
+                    Stay tuned for updates as we continue to develop and refine this important tool. Clima is committed to making a positive impact by raising awareness and encouraging proactive steps toward sustainability.</p>
+            </div>
+        </div>
+        <div class="project">
+            <div class="project-frame">
+                <img src="img2.png" alt="Project 2">
+                <div class="frame-overlay"></div>
+            </div>
+            <div class="project-content">
+                <h3>Crypto-Tracker</h3>
+                <p>The project "Crypto Tracker" is a comprehensive web application built using HTML, CSS, and JavaScript with real-time integration of cryptocurrency stock data through API integration. Its primary goal is to provide users with up-to-date information on cryptocurrency prices, trends, and historical data. The interface is designed to be intuitive and informative, offering insights into the dynamic world of cryptocurrencies.
+
+                    One of the key features of Crypto Tracker is its timeline section, which showcases the highest cryptocurrency stock years to date. This timeline not only highlights the historical performance of various cryptocurrencies but also allows users to analyze trends and make informed investment decisions.
+                    
+                    The project is still in development, with a strong emphasis on scalability. This includes optimizing data retrieval and processing to handle large volumes of real-time data efficiently. The interface is being refined to ensure a seamless user experience, with responsive design elements that adapt to different devices and screen sizes.
+                    
+                    Crypto Tracker aims to be a valuable tool for both casual users and seasoned investors interested in the cryptocurrency market. By providing accurate and timely information in an accessible format, it empowers users to stay informed and navigate the complexities of the crypto world with confidence.</p>
+            </div>
+        </div>
+       
+    </section>
+    
+    
+
+    <section id="resume">
+       <h2>Resume</h2> 
+        <a href="your-resume.pdf" download>Download My Resume</a>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>Email: tauferqkhan77@gmail.com</p>
+        <p>Phone: 7815021399</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Taufeeq. All rights reserved.</p>
+        
+    </footer>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Animate the skill levels
+    const skillLevels = document.querySelectorAll('.skill-level');
+    skillLevels.forEach(skillLevel => {
+        const skillValue = skillLevel.getAttribute('data-skill');
+        skillLevel.style.width = skillValue;
+    });
+});
+document.addEventListener('DOMContentLoaded', function() {
+    const projects = document.querySelectorAll('.project');
+
+    projects.forEach(project => {
+        const img = project.querySelector('img');
+        const projectContent = project.querySelector('.project-content');
+
+        img.addEventListener('click', function() {
+            projectContent.classList.toggle('show');
+        });
+    });
+});
+    </script>
+   
+</body>
+</html>

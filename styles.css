@@ -1,0 +1,233 @@
+body {
+    background: linear-gradient(to bottom, #ffffff, #30439d);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003366;
+    color: rgba(8, 185, 255, 0.523);
+    text-align: center;
+    padding: 20px 0;
+}
+
+#about img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    position: relative;
+    animation: lightMove 3s infinite;
+}
+
+@keyframes lightMove {
+    0% {
+        box-shadow: 0 0 15px 5px rgba(0, 251, 255, 0.37);
+    }
+    25% {
+        box-shadow: 0 0 25px 15px rgba(35, 185, 199, 0.527);
+    }
+    50% {
+        box-shadow: 0 0 35px 20px rgba(0, 145, 255, 0.3);
+    }
+    75% {
+        box-shadow: 0 0 25px 15px rgba(0, 25, 250, 0.234);
+    }
+    100% {
+        box-shadow: 0 0 15px 5px rgba(221, 255, 0, 0.181);
+    }
+}
+
+section {
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(41, 3, 255, 0.292);
+    margin: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: popUp 0.6s forwards;
+}
+
+@keyframes popUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section:nth-of-type(1) {
+    animation-delay: 0.2s;
+}
+
+section:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+section:nth-of-type(3) {
+    animation-delay: 0.6s;
+}
+
+section:nth-of-type(4) {
+    animation-delay: 0.8s;
+}
+
+section:nth-of-type(5) {
+    animation-delay: 1s;
+}
+
+h2 {
+    text-align: center;
+    margin: 0 auto 20px auto;
+    width: fit-content;
+}
+
+.skill {
+    margin: 20px 0;
+    text-align: left;
+    max-width: 600px;
+    margin: 0 auto 20px auto;
+}
+
+.skill p {
+    margin: 0 0 5px 0;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: rgba(12, 131, 251, 0.325);
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    height: 20px;
+}
+
+.skill-level {
+    height: 100%;
+    background-color: #003366;
+    border-radius: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    transition: width 1s ease-in-out;
+}
+
+
+#projects .project {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+#projects .project:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+#projects .project img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    animation: floatImage 3s infinite;
+    cursor: pointer;
+}
+
+
+#projects .project-content {
+    max-width: 600px;
+    text-align: left;
+}
+
+a {
+    color: #003366;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+@keyframes scrollDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+.scroll-down {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollDown 2s infinite;
+}
+
+footer {
+    background-color: #003366;
+    color: rgb(99, 144, 189);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.project {
+    position: relative;
+    margin: 20px 0;
+}
+
+.project-frame {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.project-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.frame-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, #b7afff00, #a0e7ff00); /* Funky gradient colors */
+    opacity: 0.7;
+    z-index: 1;
+    border-radius: 10px;
+    pointer-events: none; /* Allow clicks to pass through to image */
+}
+
+.project-content {
+    position: absolute;
+    top: 0;
+   
+    transform: translate(-50%, -50%);
+    background-color: rgba(8, 214, 250, 0.845);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(4, 70, 253, 0.426);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+   
+}
+.project-content{
+    right: 0;
+    pointer-events: auto;
+}
+.project:hover .project-content {
+    opacity: 1;
+    visibility: visible;
+}
